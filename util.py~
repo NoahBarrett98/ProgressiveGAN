@@ -17,15 +17,15 @@ def downsample(img, new_dims):
 
     # new axis to feed into model
     return np.array(img)[np.newaxis, ...]
-"""
+
 def preprocess(img_dict, lr_dim, upscale_factor=2):
-    
+    """
     preprocess an image to be lr hr pair for a given dim
     :param img: full size img
     :param lr_dim: dims for low res
     :param upscale_factor: upscale factor for hr
     :return: lr hr pair
-   
+    """
 
     img = img_dict['image']
     print(img)
@@ -35,4 +35,3 @@ def preprocess(img_dict, lr_dim, upscale_factor=2):
     #low_res = downsample(img, lr_dim)
     #high_res = downsample(img, (l*upscale_factor for l in lr_dim))
     return img_dict
-"""
